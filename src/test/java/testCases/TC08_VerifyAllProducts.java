@@ -12,15 +12,12 @@ public class TC08_VerifyAllProducts extends TestBase {
     public void test01() {
 //      Navigate to url 'http://automationexercise.com'
         driver.get("https://automationexercise.com");
-        waitFor(5);
-        driver.navigate().refresh();
 
 //      Verify that home page is visible successfully
         WebElement homePage = driver.findElement(By.xpath("//body"));
         Assert.assertTrue(homePage.isDisplayed());
 
 //      Click on 'Products' button
-
         driver.findElement(By.xpath("//*[text()=' Products']")).click();
         driver.navigate().refresh();
 
@@ -36,11 +33,10 @@ public class TC08_VerifyAllProducts extends TestBase {
 
 //      Click on 'View Product' of first product
         Actions action = new Actions(driver);
-
         action.moveToElement(driver.findElement(By.xpath("(//i[@class='fa fa-plus-square'])[1]"))).perform();
-        waitFor(3);
+
+        driver.navigate().refresh();
         driver.findElement(By.xpath("(//div[@class='choose']//li//a)[1]")).click();
-        waitFor(3);
 
 //      User is landed to product detail page
         WebElement productDetPage = driver.findElement(By.xpath("//*[@class='product-information']"));
