@@ -29,7 +29,7 @@ public abstract class TestBase { //abstract yapmamizin sebebi bu sinifin objesin
 
     @After
     public void tearDown() {
-        driver.quit();
+        //driver.quit();
     }
 
 //------------------window handle pencere gecisi icin methodlar-----------------

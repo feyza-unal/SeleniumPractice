@@ -21,6 +21,8 @@ public class ActionsKeyboard extends TestBase {
                 sendKeys(Keys.PAGE_DOWN).
                 perform();
 
+        //actions.scrollToElement(driver.findElement(By.xpath("(//div[@class='render'])[1]"))).perform();
+        //-> buraya kadar kaydir
 
 //      videoyu izlemek icin Play tusuna basin
         WebElement iframe = driver.findElement(By.xpath("//iframe"));
