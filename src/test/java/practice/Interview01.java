@@ -52,20 +52,3 @@ public class Interview01 extends TestBase {
 
     }
 }
-
-// String color = driver.findElement(By.xpath("//*[@id='inline-twister-expanded-dimension-text-color_name']")).getText();
-
-//        String size512 = driver.findElement(By.xpath("//*[@id='size_name_2-announce']")).getText();
-//        String size256 = driver.findElement(By.xpath("//*[@id='size_name_1']")).getText();
-//        String size128 = driver.findElement(By.xpath("//*[@id='size_name_0-announce']")).getText();
-
-//        System.out.println("\n\n"+title+"\nSize : "+size512+"\nColor : "+color+"\nPrice : "+price+"\nStock Status : "+stockStatus);
-//        driver.findElement(By.xpath("//*[@id='size_name_1']")).click();
-//        System.out.println("\n\n"+title+"\nSize : "+size256+"\nColor : "+color+"\nPrice : "+price+"\nStock Status : "+stockStatus);
-//        driver.findElement(By.xpath("//*[@id='size_name_0']")).click();
-//        System.out.println("\n\n"+title+"\nSize : "+size128+"\nColor : "+color+"\nPrice : "+price+"\nStock Status : "+stockStatus);
-
-
-//        String title = driver.findElement(By.id("productTitle")).getText();
-//        String price = driver.findElement(By.xpath("(//*[@class='a-offscreen'])[1]")).getText();
-//        String stockStatus = driver.findElement(By.xpath("//*[@class='a-size-medium a-color-success']")).getText();
