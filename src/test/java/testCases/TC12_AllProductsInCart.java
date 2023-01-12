@@ -37,7 +37,7 @@ public class TC12_AllProductsInCart extends TestBase {
 //      Hover over second product and click 'Add to cart'
         WebElement secondProduct = driver.findElement(By.xpath("(//*[@class='productinfo text-center'])[1]"));
         actions.moveToElement(secondProduct).perform();
-        waitFor(4);
+        waitFor(5);
         driver.findElement(By.xpath("(//*[@class='btn btn-default add-to-cart'])[3]")).click();
 
 //      Click 'View Cart' button
