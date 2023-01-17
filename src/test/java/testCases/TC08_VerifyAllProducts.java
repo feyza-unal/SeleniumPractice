@@ -20,7 +20,7 @@ public class TC08_VerifyAllProducts extends TestBase {
 //      Click on 'Products' button
         driver.findElement(By.xpath("//*[text()=' Products']")).click();
         driver.navigate().refresh();
-
+        driver.findElement(By.xpath("//*[text()=' Products']")).click();
         System.out.println(driver.getCurrentUrl());
 
 //      Verify user is navigated to ALL PRODUCTS page successfully

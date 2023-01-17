@@ -50,9 +50,6 @@ public class TestCase15 extends TestBase {
         driver.findElement(By.xpath("//*[@data-image-index='2']")).click();
         waitFor(3);
 
-//      ürünün title'ni ve fiyatını variable’a assign edip ürünü sepete ekleyelim
-        //tr sartlari yuzunden sepete eklenmiyor :(
-
     }
 
     @Test
@@ -61,19 +58,26 @@ public class TestCase15 extends TestBase {
         driver.switchTo().newWindow(WindowType.TAB).get("https://www.amazon.com");
         
 //      dropdown’dan bebek bölümüne secin
+        WebElement dropdown = driver.findElement(By.id("searchDropdownBox"));
+        Select slctDropDown = new Select(dropdown);
+        slctDropDown.selectByVisibleText("Baby");
 
 //      bebek puset aratıp bulundan sonuç sayısını yazdırın
+        driver.findElement(By.id("twotabsearchtextbox")).sendKeys("bebek puseti"+Keys.ENTER);
 
 //      sonuç yazsının puset içerdiğini test edin
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@class='a-color-state a-text-bold']")).
+                getText().
+                contains("bebek puseti"));
 
 //      üçüncü ürüne relative locater kullanarak tıklayin
+        List<WebElement> sonuclar = driver.findElements(By.xpath("//*[@class='s-image']"));
+        sonuclar.get(2).click();
 
 //      title ve fiyat bilgilerini assign edelim ve ürünü sepete ekleyin
-
+        Assert.assertTrue(driver.findElement(By.id("productTitle")).isDisplayed());
+        Assert.assertTrue(driver.findElement(By.xpath("//*[@id='delightPricingBadge_feature_div']")).isDisplayed());
+        waitFor(3);
     }
 
-    @Test
-    public void test04() {
-//1-sepetteki ürünlerle eklediğimiz ürünlerin aynı olduğunu isim ve fiyat olarak doğrulayın
-    }
 }
